@@ -2,322 +2,380 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/prettyPhoto.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/price-range.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/animate.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/responsive.css') }}" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="{{ URL::asset('images/ico/favicon.ico') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ URL::asset('images/ico/apple-touch-icon-144-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ URL::asset('images/ico/apple-touch-icon-114-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ URL::asset('images/ico/apple-touch-icon-72-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ URL::asset('images/ico/apple-touch-icon-57-precomposed.png') }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="OneTech shop project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('style')
 </head><!--/head-->
 <body>
-    <header id="header"><!--header-->
-        <div class="header_top"><!--header_top-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="contactinfo">
-                            <ul class="nav nav-pills">
-                                <li><a href="https://api.whatsapp.com/send?phone=6285727772994&text=Halo%20Bangzan_Store%20Saya%20Ingin%20Mengenal%20Kamu%20:)" target="_blank"><i class="fa fa-phone"></i> +62857 2777 2994</a></li>
-                                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bangzan1996@gmail.com&su=&body=&bcc=" target="_blank"><i class="fa fa-envelope"></i> bangzan1996@gmail.com</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="social-icons pull-right">
-                            <ul class="nav navbar-nav">
-                                <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-middle"><!--header-middle-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                            <div class="logo pull-left">
-                                <a href="{{url('/')}}"><img src="{{ URL::asset('images/home/logo.png') }}" alt="" style="width: 135px; height: 30px;" /></a>
-                            </div>
-                            <div class="btn-group pull-right">
-                                    <!-- <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                                    USA
-                                                    <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                    <li><a href="#">Canada</a></li>
-                                                    <li><a href="#">UK</a></li>
-                                            </ul>
-                                    </div>
-                                    
-                                    <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                                    DOLLAR
-                                                    <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                    <li><a href="#">Canadian Dollar</a></li>
-                                                    <li><a href="#">Pound</a></li>
-                                            </ul>
-                                    </div> -->
-                            </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="shop-menu pull-right">
-                            <ul class="">
-                                <!-- <li><a href="#"><i class="fa fa-user"></i> Account</a></li> -->
-                                <!-- <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li> -->
-                                <!-- <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
-                                <li><a href="{{url('/keranjang')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <!-- <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li> -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="super_container">
     
-        <div class="header-bottom"><!--header-bottom-->
+    <!-- Header -->
+    
+    <header class="header">
+
+        <!-- Top Bar -->
+
+        <div class="top_bar">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-9">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="mainmenu pull-left">
-                            <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="{{url('/')}}">Home</a></li>
-                                <!-- <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-                                        <li><a href="product-details.html">Product Details</a></li> 
-                                        <li><a href="checkout.html">Checkout</a></li> 
-                                        <li><a href="cart.html">Cart</a></li> 
-                                        <li><a href="login.html">Login</a></li> 
-                                    </ul>
-                                </li> 
-                                <li class="dropdown"><a href="#" class="active">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html" class="active">Blog List</a></li>
-                                        <li><a href="blog-single.html">Blog Single</a></li>
-                                    </ul>
-                                </li> 
-                                <li><a href="404.html">404</a></li> -->
-                                <!-- <li><a href="contact-us.html">Kontak</a></li> -->
-                                <li><a href="{{url('cara-pesan')}}">Cara Pemesanan</a></li>
-                            </ul>
+                    <div class="col d-flex flex-row">
+                        <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="{{ URL::asset('images/phone.png') }}" alt=""></div>+62 857 2777 2994</div>
+                        <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="{{ URL::asset('images/mail.png') }}" alt=""></div><a href="mailto:bangzan1996@gmail.com">bangzan1996@gmail.com</a></div>
+                        <div class="top_bar_content ml-auto">
+                            <div class="top_bar_user">
+                                <div class="user_icon"><img src="{{ URL::asset('images/user.svg') }}" alt=""></div>
+                                <div><a href="#">Register</a></div>
+                                <div><a href="#">Sign in</a></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="search_box pull-right">
-                            <input type="text" placeholder="Search" id="search" value="@if(isset($cari)) {{$cari}} @endif" />
+                </div>
+            </div>      
+        </div>
+
+        <!-- Header Main -->
+
+        <div class="header_main">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Logo -->
+                    <div class="col-lg-2 col-sm-3 col-3 order-1">
+                        <div class="logo_container">
+                            <div class="logo"><a href="#">BangZan</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Search -->
+                    <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                        <div class="header_search">
+                            <div class="header_search_content">
+                                <div class="header_search_form_container">
+                                    <form action="#" class="header_search_form clearfix">
+                                        <input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+                                        <div class="custom_dropdown">
+                                            <div class="custom_dropdown_list">
+                                                <span class="custom_dropdown_placeholder clc">All Categories</span>
+                                                <i class="fas fa-chevron-down"></i>
+                                                <ul class="custom_list clc">
+                                                    <li><a class="clc" href="#">All Categories</a></li>
+                                                    <li><a class="clc" href="#">Computers</a></li>
+                                                    <li><a class="clc" href="#">Laptops</a></li>
+                                                    <li><a class="clc" href="#">Cameras</a></li>
+                                                    <li><a class="clc" href="#">Hardware</a></li>
+                                                    <li><a class="clc" href="#">Smartphones</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="header_search_button trans_300" value="Submit"><img src="{{ URL::asset('images/search.png') }}" alt=""></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist -->
+                    <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                        <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                            <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+                                <div class="wishlist_icon"><img src="{{ URL::asset('images/heart.png') }}" alt=""></div>
+                                <div class="wishlist_content">
+                                    <div class="wishlist_text"><a href="#">Wishlist</a></div>
+                                    <div class="wishlist_count">115</div>
+                                </div>
+                            </div>
+
+                            <!-- Cart -->
+                            <div class="cart">
+                                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                                    <div class="cart_icon">
+                                        <img src="{{ URL::asset('images/cart.png') }}" alt="">
+                                        <div class="cart_count"><span>10</span></div>
+                                    </div>
+                                    <div class="cart_content">
+                                        <div class="cart_text"><a href="#">Cart</a></div>
+                                        <div class="cart_price">$85</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Main Navigation -->
+
+        <nav class="main_nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        
+                        <div class="main_nav_content d-flex flex-row">
+
+                            <!-- Categories Menu -->
+
+                            @yield('kategori')
+
+                            <!-- Main Nav Menu -->
+
+                            <div class="main_nav_menu ml-auto">
+                                <ul class="standard_dropdown main_nav_dropdown">
+                                    <li><a href="{{url('/')}}">Home<i class="fas fa-chevron-down"></i></a></li>
+                                    <li class="hassubs">
+                                        <a href="#">Super Deals<i class="fas fa-chevron-down"></i></a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
+                                                <ul>
+                                                    <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                    <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                    <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs">
+                                        <a href="#">Featured Brands<i class="fas fa-chevron-down"></i></a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
+                                                <ul>
+                                                    <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                    <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                    <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs">
+                                        <a href="#">Pages<i class="fas fa-chevron-down"></i></a>
+                                        <ul>
+                                            <li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Menu Trigger -->
+
+                            <div class="menu_trigger_container ml-auto">
+                                <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+                                    <div class="menu_burger">
+                                        <div class="menu_trigger_text">menu</div>
+                                        <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Menu -->
+
+        <div class="page_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        
+                        <div class="page_menu_content">
+                            
+                            <div class="page_menu_search">
+                                <form action="#">
+                                    <input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
+                                </form>
+                            </div>
+                            <ul class="page_menu_nav">
+                                <li class="page_menu_item has-children">
+                                    <a href="#">Language<i class="fa fa-angle-down"></i></a>
+                                    <ul class="page_menu_selection">
+                                        <li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="page_menu_item has-children">
+                                    <a href="#">Currency<i class="fa fa-angle-down"></i></a>
+                                    <ul class="page_menu_selection">
+                                        <li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="page_menu_item">
+                                    <a href="#">Home<i class="fa fa-angle-down"></i></a>
+                                </li>
+                                <li class="page_menu_item has-children">
+                                    <a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
+                                    <ul class="page_menu_selection">
+                                        <li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
+                                        <li class="page_menu_item has-children">
+                                            <a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
+                                            <ul class="page_menu_selection">
+                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="page_menu_item has-children">
+                                    <a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
+                                    <ul class="page_menu_selection">
+                                        <li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="page_menu_item has-children">
+                                    <a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
+                                    <ul class="page_menu_selection">
+                                        <li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>
+                                <li class="page_menu_item"><a href="contact.html">contact<i class="fa fa-angle-down"></i></a></li>
+                            </ul>
+                            
+                            <div class="menu_contact">
+                                <div class="menu_contact_item"><div class="menu_contact_icon"><img src="{{ URL::asset('images/phone_white.png') }}" alt=""></div>+38 068 005 3570</div>
+                                <div class="menu_contact_item"><div class="menu_contact_icon"><img src="{{ URL::asset('images/mail_white.png') }}" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
     
-    @yield('content')
-        
-    <footer id="footer"><!--Footer-->
-        <!-- <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <div class="companyinfo">
-                            <h2><span>e</span>-shopper</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-7">
-                        <div class="col-sm-3">
-                            <div class="video-gallery text-center">
-                                <a href="#">
-                                    <div class="iframe-img">
-                                        <img src="images/home/iframe1.png" alt="" />
-                                    </div>
-                                    <div class="overlay-icon">
-                                        <i class="fa fa-play-circle-o"></i>
-                                    </div>
-                                </a>
-                                <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
-                            </div>
-                        </div>               
-                    <div class="col-sm-3">
-                        <div class="video-gallery text-center">
-                            <a href="#">
-                                <div class="iframe-img">
-                                    <img src="images/home/iframe2.png" alt="" />
-                                </div>
-                                <div class="overlay-icon">
-                                    <i class="fa fa-play-circle-o"></i>
-                                </div>
-                            </a>
-                            <p>Circle of Hands</p>
-                            <h2>24 DEC 2014</h2>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="video-gallery text-center">
-                            <a href="#">
-                                <div class="iframe-img">
-                                    <img src="images/home/iframe3.png" alt="" />
-                                </div>
-                                                                    <div class="overlay-icon">
-                                                                        <i class="fa fa-play-circle-o"></i>
-                                                                    </div>
-                                                                </a>
-                                                                <p>Circle of Hands</p>
-                                                                <h2>24 DEC 2014</h2>
-                                                        </div>
-                                                </div>
-                                                
-                                                <div class="col-sm-3">
-                                                        <div class="video-gallery text-center">
-                                                                <a href="#">
-                                                                        <div class="iframe-img">
-                                                                                <img src="images/home/iframe4.png" alt="" />
-                                                                        </div>
-                                                                        <div class="overlay-icon">
-                                                                                <i class="fa fa-play-circle-o"></i>
-                                                                        </div>
-                                                                </a>
-                                                                <p>Circle of Hands</p>
-                                                                <h2>24 DEC 2014</h2>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                                <div class="address">
-                                                        <img src="images/home/map.png" alt="" />
-                                                        <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-                
-                <div class="footer-widget">
-                        <div class="container">
-                                <div class="row">
-                                        <div class="col-sm-2">
-                                                <div class="single-widget">
-                                                        <h2>Service</h2>
-                                                        <ul class="nav nav-pills nav-stacked">
-                                                                <li><a href="#">Online Help</a></li>
-                                                                <li><a href="#">Contact Us</a></li>
-                                                                <li><a href="#">Order Status</a></li>
-                                                                <li><a href="#">Change Location</a></li>
-                                                                <li><a href="#">FAQ’s</a></li>
-                                                        </ul>
-                                                </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <div class="single-widget">
-                                                        <h2>Quock Shop</h2>
-                                                        <ul class="nav nav-pills nav-stacked">
-                                                                <li><a href="#">T-Shirt</a></li>
-                                                                <li><a href="#">Mens</a></li>
-                                                                <li><a href="#">Womens</a></li>
-                                                                <li><a href="#">Gift Cards</a></li>
-                                                                <li><a href="#">Shoes</a></li>
-                                                        </ul>
-                                                </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <div class="single-widget">
-                                                        <h2>Policies</h2>
-                                                        <ul class="nav nav-pills nav-stacked">
-                                                                <li><a href="#">Terms of Use</a></li>
-                                                                <li><a href="#">Privecy Policy</a></li>
-                                                                <li><a href="#">Refund Policy</a></li>
-                                                                <li><a href="#">Billing System</a></li>
-                                                                <li><a href="#">Ticket System</a></li>
-                                                        </ul>
-                                                </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <div class="single-widget">
-                                                        <h2>About Shopper</h2>
-                                                        <ul class="nav nav-pills nav-stacked">
-                                                                <li><a href="#">Company Information</a></li>
-                                                                <li><a href="#">Careers</a></li>
-                                                                <li><a href="#">Store Location</a></li>
-                                                                <li><a href="#">Affillate Program</a></li>
-                                                                <li><a href="#">Copyright</a></li>
-                                                        </ul>
-                                                </div>
-                                        </div>
-                                        <div class="col-sm-3 col-sm-offset-1">
-                                                <div class="single-widget">
-                                                        <h2>About Shopper</h2>
-                                                        <form action="#" class="searchform">
-                                                                <input type="text" placeholder="Your email address" />
-                                                                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-                                                                <p>Get the most recent updates from <br />our site and be updated your self...</p>
-                                                        </form>
-                                                </div>
-                                        </div>
-                                        
-                                </div>
-                        </div>
-                </div> -->
-                
-                <div class="footer-bottom">
-                        <div class="container">
-                                <div class="row">
-                                        <p class="pull-left">Copyright © 2018 BangzanStore Inc. All rights reserved.</p>
-                                        <p class="pull-right">Designed by <span><a target="_blank" href="https://api.whatsapp.com/send?phone=6285727772994&text=Halo%20Bangzan_Store%20Saya%20Ingin%20Mengenal%20Kamu%20:)">Akhmad Faozan Ramdoni</a></span></p>
-                                </div>
-                        </div>
-                </div>
-                
-        </footer><!--/Footer-->
-        
+    <!-- Banner -->
 
-  
-    <script src="{{ URL::asset('js/jquery.js') }}"></script>
-    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ URL::asset('js/jquery.scrollUp.min.js') }}"></script>
-    <script src="{{ URL::asset('js/price-range.js') }}"></script>
-    <script src="{{ URL::asset('js/jquery.prettyPhoto.js') }}"></script>
-    <script src="{{ URL::asset('js/main.js') }}"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#search').keypress(function(e){
-                if(e.keyCode==13){
-                    $nama = $('#search').val();
-                    window.location.href = "{{url('/cari/')}}/"+$nama+"/1";
-                }              
-            });
-        });
-    </script>
+    @yield('content')
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 footer_col">
+                    <div class="footer_column footer_contact">
+                        <div class="logo_container">
+                            <div class="logo"><a href="#">BangZan</a></div>
+                        </div>
+                        <div class="footer_title">Contact Person</div>
+                        <div class="footer_phone">+62 857 2777 2994</div>
+                        <div class="footer_contact_text">
+                            <p>Jalan Kuburan Lama</p>
+                            <p>Depan Masjid Al-Muhajirin</p>
+                        </div>
+                        <div class="footer_social">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google"></i></a></li>
+                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-2 offset-lg-2">
+                    <div class="footer_column">
+                        <div class="footer_title">Find it Fast</div>
+                        <ul class="footer_list">
+                            <li><a href="#">Computers & Laptops</a></li>
+                            <li><a href="#">Cameras & Photos</a></li>
+                            <li><a href="#">Hardware</a></li>
+                            <li><a href="#">Smartphones & Tablets</a></li>
+                            <li><a href="#">TV & Audio</a></li>
+                        </ul>
+                        <div class="footer_subtitle">Gadgets</div>
+                        <ul class="footer_list">
+                            <li><a href="#">Car Electronics</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="footer_column">
+                        <ul class="footer_list footer_list_2">
+                            <li><a href="#">Video Games & Consoles</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Cameras & Photos</a></li>
+                            <li><a href="#">Hardware</a></li>
+                            <li><a href="#">Computers & Laptops</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <div class="col-lg-2">
+                    <div class="footer_column">
+                        <div class="footer_title">Customer Care</div>
+                        <ul class="footer_list">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Order Tracking</a></li>
+                            <li><a href="#">Wish List</a></li>
+                            <li><a href="#">Customer Services</a></li>
+                            <li><a href="#">Returns / Exchange</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Product Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                    <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                        <div class="copyright_content"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- <script language=JavaScript>
         $(document).ready(function(){
             $('#search').keypress(function(e){
